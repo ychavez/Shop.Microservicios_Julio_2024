@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{81D37B41-8041-4F44-B70C-E772387326A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{EC84EDF2-50FE-4F5A-BDFD-E0B056378EBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{924CB32C-B983-4A3F-A997-4FE62AEF8B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Api", "Catalog.Api\Catalog.Api.csproj", "{06F72E9A-BB78-4FE2-B7F2-B3DBF0C1A058}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06F72E9A-BB78-4FE2-B7F2-B3DBF0C1A058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F72E9A-BB78-4FE2-B7F2-B3DBF0C1A058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F72E9A-BB78-4FE2-B7F2-B3DBF0C1A058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F72E9A-BB78-4FE2-B7F2-B3DBF0C1A058}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{06F72E9A-BB78-4FE2-B7F2-B3DBF0C1A058} = {EC84EDF2-50FE-4F5A-BDFD-E0B056378EBA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06E046A8-9AE6-4902-96D9-2BBC3488C054}
+	EndGlobalSection
+EndGlobal
