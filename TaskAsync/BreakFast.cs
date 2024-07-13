@@ -38,27 +38,40 @@
 
         public static void ServirMilCafes()
         {
-            for (int i = 0; i < 1000; i++)
+            Parallel.For(0, 1000, new ParallelOptions { MaxDegreeOfParallelism = 12 }
+            , async (x, y) =>
             {
+                await ServirMilCafesAsync();
+            });
 
-                PrdenderCafetera();
-                Servir();
-            }
 
         }
 
 
         public static async Task ServirMilCafesAsync()
         {
-            List<Task> list = new List<Task>();
+            var semaphore = new SemaphoreSlim(10);
 
-            for (int i = 0; i < 100_000; i++)
+            var clientes = Enumerable.Range(0, 1000);
+
+            List<Task> breakfasts = new List<Task>();
+
+
+            breakfasts = clientes.Select(async b =>
             {
-                list.Add(CafeeAsync());
-               
-            }
+                await semaphore.WaitAsync();
+                try
+                {
+                    await CafeeAsync();
+                }
+                finally
+                {
+                    semaphore.Release();
+                }
+            }).ToList();
+ 
+          await  Task.WhenAll(breakfasts);
 
-            await Task.WhenAll(list);
         }
 
         private static async Task CafeeAsync() 

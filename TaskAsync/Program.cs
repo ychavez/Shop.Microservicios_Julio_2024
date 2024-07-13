@@ -8,7 +8,7 @@ namespace TaskAsync
         {
             var stopWatch = new Stopwatch();
             stopWatch.Start();
-           await BreakFast.ServirMilCafesAsync();
+            BreakFast.ServirMilCafes();
             stopWatch.Stop();
             Console.WriteLine($"async: Pasaron {stopWatch.ElapsedMilliseconds} milisegundos");
 
