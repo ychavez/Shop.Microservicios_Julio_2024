@@ -1,5 +1,6 @@
 
 using Catalog.Api.Data;
+using Catalog.Api.Repositories;
 
 namespace Catalog.Api
 {
@@ -16,6 +17,7 @@ namespace Catalog.Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<ICatalogContext, CatalogContext>();
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
             var app = builder.Build();
 
