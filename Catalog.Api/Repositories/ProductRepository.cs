@@ -13,6 +13,7 @@ namespace Catalog.Api.Repositories
         }
         public async Task CreateProduct(Product product)
         {
+
             await catalogContext.Products.InsertOneAsync(product);
         }
 
@@ -46,5 +47,7 @@ namespace Catalog.Api.Repositories
 
             return updateResults.IsAcknowledged && updateResults.ModifiedCount > 0;
         }
+
+
     }
 }
