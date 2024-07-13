@@ -9,9 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{EC84
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{924CB32C-B983-4A3F-A997-4FE62AEF8B90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Api", "Catalog.Api\Catalog.Api.csproj", "{06F72E9A-BB78-4FE2-B7F2-B3DBF0C1A058}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Api", "Catalog.Api\Catalog.Api.csproj", "{06F72E9A-BB78-4FE2-B7F2-B3DBF0C1A058}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9B23A106-DF6E-44D2-88B5-A69FE3FB6E56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MISC", "MISC", "{2E8D5BA3-4229-4467-9AC1-745FB325E980}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskAsync", "TaskAsync\TaskAsync.csproj", "{52B5AED5-576B-4DF9-8D32-15BCEA0C8E8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,12 +31,17 @@ Global
 		{9B23A106-DF6E-44D2-88B5-A69FE3FB6E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B23A106-DF6E-44D2-88B5-A69FE3FB6E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B23A106-DF6E-44D2-88B5-A69FE3FB6E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52B5AED5-576B-4DF9-8D32-15BCEA0C8E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B5AED5-576B-4DF9-8D32-15BCEA0C8E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B5AED5-576B-4DF9-8D32-15BCEA0C8E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B5AED5-576B-4DF9-8D32-15BCEA0C8E8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{06F72E9A-BB78-4FE2-B7F2-B3DBF0C1A058} = {EC84EDF2-50FE-4F5A-BDFD-E0B056378EBA}
+		{52B5AED5-576B-4DF9-8D32-15BCEA0C8E8D} = {2E8D5BA3-4229-4467-9AC1-745FB325E980}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {06E046A8-9AE6-4902-96D9-2BBC3488C054}

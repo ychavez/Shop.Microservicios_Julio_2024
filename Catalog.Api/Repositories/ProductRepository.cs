@@ -35,7 +35,9 @@ namespace Catalog.Api.Repositories
             .FirstOrDefaultAsync();
 
         public async Task<IEnumerable<Product>> GetProducts()
-        => await catalogContext.Products.Find(x => true).ToListAsync();
+        {
+            return await catalogContext.Products.Find(x => true).ToListAsync();
+        }
 
         public async Task<bool> UpdateProduct(Product product)
         {
