@@ -10,6 +10,9 @@ services:
   catalogdb:
    image: mongo
 
+  orderdb:
+   image: mcr.microsoft.com/mssql/server:2022-latest
+
 volumes:
   mongo_data:
 
