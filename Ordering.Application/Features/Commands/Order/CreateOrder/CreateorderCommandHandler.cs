@@ -12,6 +12,8 @@ namespace Ordering.Application.Features.Commands.Order.CreateOrder
         public async Task<int> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
             var order = mapper.Map<Domain.Entities.Order>(request);
+           
+            
             var newOrder = await repository.AddAsync(order);
             return newOrder.Id;
         }

@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Ordering.Application.Contracts;
 using Ordering.Domain.Common;
+using Ordering.Infrastructure.Persistence;
 using System.Linq.Expressions;
 
-namespace Ordering.Infrastructure.Persistence
+namespace Ordering.Infrastructure.Repositories
 {
-    public class GenericRepository<T>(OrderContext orderContext) 
+    public class GenericRepository<T>(OrderContext orderContext)
         : IGenericRepository<T> where T : EntityBase
 
     {
