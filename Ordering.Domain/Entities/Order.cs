@@ -10,6 +10,7 @@ namespace Ordering.Domain.Entities
         public string LastName { get; set; } = null!;
         public string Address { get; set; } = null!;
         public int PaymentMethod { get; set; }
+        public string? Email { get; set; } 
         public Guid TenantId { get; set; }
     }
 }
