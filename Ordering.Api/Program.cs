@@ -2,7 +2,10 @@
 
 namespace Ordering.Api
 {
-using Microsoft.EntityFrameworkCore;
+    using EventBus.Mesagges.Common;
+    using MassTransit;
+    using Microsoft.EntityFrameworkCore;
+    using Ordering.Api.Events;
     using Ordering.Application.Contracts;
     using Ordering.Application.Extensions;
 using Ordering.Infrastructure.Persistence;
@@ -26,6 +29,22 @@ using Ordering.Infrastructure.Persistence;
                 {
                     options.UseSqlServer(builder.Configuration
                         .GetConnectionString("OrderingConnection"));
+                });
+
+            builder.Services.AddMassTransit(
+                x =>
+                {
+                    x.AddConsumer<CheckoutEventConsumer>();
+
+                    x.UsingRabbitMq(
+                        (ctx, cfg) =>
+                        {
+                            cfg.Host(builder.Configuration["EventBussSettings:HostAddress"]);
+                            cfg.ReceiveEndpoint(
+
+                                EventBusConstants.BasketCheckoutQueue,
+                                x => x.ConfigureConsumer<CheckoutEventConsumer>(ctx));
+                        });
                 });
 
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
