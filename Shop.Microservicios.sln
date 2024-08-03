@@ -41,6 +41,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Grpc", "Inventory
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Api", "Basket.Api\Basket.Api.csproj", "{9ED4AFED-A7CA-4469-95B7-2EC68356D41B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mesagges", "Mesagges", "{2BA003A5-F804-402C-9660-B0471DF9676A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Mesagges", "EventBus.Mesagges\EventBus.Mesagges.csproj", "{4DE5131B-5533-494D-A8B7-A47C17726809}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +95,10 @@ Global
 		{9ED4AFED-A7CA-4469-95B7-2EC68356D41B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ED4AFED-A7CA-4469-95B7-2EC68356D41B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ED4AFED-A7CA-4469-95B7-2EC68356D41B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE5131B-5533-494D-A8B7-A47C17726809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE5131B-5533-494D-A8B7-A47C17726809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE5131B-5533-494D-A8B7-A47C17726809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE5131B-5533-494D-A8B7-A47C17726809}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +117,7 @@ Global
 		{E9E5A83A-1BED-408C-B72D-49E65E2414DA} = {2E8D5BA3-4229-4467-9AC1-745FB325E980}
 		{100ED951-9B5B-4B9B-AD69-4829442544A8} = {AAAB55FE-BC5C-4E38-9138-08AC148C190D}
 		{9ED4AFED-A7CA-4469-95B7-2EC68356D41B} = {81D37B41-8041-4F44-B70C-E772387326A8}
+		{4DE5131B-5533-494D-A8B7-A47C17726809} = {2BA003A5-F804-402C-9660-B0471DF9676A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {06E046A8-9AE6-4902-96D9-2BBC3488C054}

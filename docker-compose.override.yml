@@ -36,5 +36,9 @@ services:
     container_name: basketdb
     ports:
       - 6379:6379
-
-
+  
+  rabbitmq:
+   container_name: rabbitmq
+   ports:
+     - 5672:5672
+     - 15672:15672 
