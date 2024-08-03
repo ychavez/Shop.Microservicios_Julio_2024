@@ -1,0 +1,6 @@
+@Shop.Gateway_HostAddress = http://localhost:5111
+
+GET {{Shop.Gateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
