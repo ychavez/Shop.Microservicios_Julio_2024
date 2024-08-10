@@ -16,6 +16,8 @@ namespace Ordering.Api.Controllers
             => await mediator.Send(command);
 
         [HttpGet("{userName}")]
+        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Jefe,otroRol")]
         public async Task<ActionResult<List<OrdersViewModel>>> GetOrders(string userName)
             => await mediator.Send(new GetOrdersListQuery { UserName = userName });
     }
