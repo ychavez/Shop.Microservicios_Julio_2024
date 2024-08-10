@@ -59,8 +59,6 @@ namespace Basket.Api.Controllers
             {
                 var existence = await existenceClient.checkExistenceAsync(new() { Id = item.ProductId });
 
-
-
                 item.Quantity = item.Quantity > existence.ProductQty ? existence.ProductQty : item.Quantity;
 
             }
