@@ -1,11 +1,23 @@
 
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+
 namespace Shop.Gateway
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+
+            builder.Host.ConfigureAppConfiguration((ctx, conf) =>
+            {
+                conf.AddJsonFile(Path.Combine("Configuration", "configuration.json"));
+            });
+            
+
+            builder.Services.AddOcelot();
 
             // Add services to the container.
 
@@ -27,6 +39,8 @@ namespace Shop.Gateway
 
 
             app.MapControllers();
+
+            await app.UseOcelot();
 
             app.Run();
         }
